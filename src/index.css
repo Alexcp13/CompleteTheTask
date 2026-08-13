@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --color-background: #050505; 
+  --color-foreground: #ffffff;
+  --color-card: #111111;
+  --color-card-foreground: #ffffff;
+  --color-popover: #1a1a1a;
+  --color-popover-foreground: #ffffff;
+  --color-primary: #FFD700;
+  --color-primary-foreground: #000000;
+  --color-secondary: #222222;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #222222;
+  --color-muted-foreground: #a1a1aa;
+  --color-accent: #333333;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-border: #222222;
+  --color-input: #222222;
+  --color-ring: #FFD700;
+
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --radius-sm: 0.5rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom utility for hiding scrollbar but allowing scroll */
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  
+  .border-glow {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.15);
+  }
+}
